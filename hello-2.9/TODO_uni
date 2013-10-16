@@ -1,0 +1,5 @@
+TODO
+----
+
+* Per AC_DEFINE direktiven einrichten um Hello, World gegen Hello, Beuth! mit dem ./configure Attribut --enable-beuth auszutauschen
+
