@@ -25,6 +25,16 @@ dnl Checks for programs.
 dnl We need a C compiler.
 AC_PROG_CC
 
+AC_ARG_ENABLE([beuth], [dnl
+AS_HELP_STRING(
+  [--enable-beuth],
+  [Test Beuth-Hochschule enable])
+AS_HELP_STRING(
+  [--disable-beuth],
+  [Test Beuth-Hochschule disable])])
+
+
+
 dnl Since we use gnulib: gl_EARLY must be called as soon as possible after
 dnl the C compiler is checked.  The others could be later, but we just
 dnl keep everything together.
