@@ -697,6 +697,9 @@
 /* Define to 1 if you need to in order for 'stat' and other things to work. */
 #undef _POSIX_SOURCE
 
+/* Say beuth as well */
+#undef _WITH_BEUTH
+
 /* Define to 500 only on HP-UX. */
 #undef _XOPEN_SOURCE
 

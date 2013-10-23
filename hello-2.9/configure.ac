@@ -25,14 +25,18 @@ dnl Checks for programs.
 dnl We need a C compiler.
 AC_PROG_CC
 
-AC_ARG_ENABLE([beuth], [dnl
-AS_HELP_STRING(
-  [--enable-beuth],
-  [Test Beuth-Hochschule enable])
-AS_HELP_STRING(
-  [--disable-beuth],
-  [Test Beuth-Hochschule disable])])
-
+AC_ARG_ENABLE(beuth,
+     AC_HELP_STRING([--enable-beuth], [Say beuth as well]),
+     [if test "${enable_beuth}" = "yes" ; then
+             AC_DEFINE(_WITH_BEUTH, 1, Say beuth as well)
+             AC_MSG_RESULT([yes])
+     else
+             AC_DEFINE(_WITH_BEUTH, 0, Say beuth as well)
+             AC_MSG_RESULT([no])
+     fi],
+     # Default value for configure
+     AC_MSG_RESULT([no])
+     )
 
 
 dnl Since we use gnulib: gl_EARLY must be called as soon as possible after

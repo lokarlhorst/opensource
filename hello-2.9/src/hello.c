@@ -47,7 +47,11 @@ main (int argc, char *argv[])
 {
   int optc;
   int lose = 0;
-  const char *greeting_msg = _("Hello, world!");
+  #ifdef _WITH_BEUTH
+    const char *greeting_msg = _("Hello, Beuth!");
+  #else
+    const char *greeting_msg = _("Hello, world!");
+  #endif
   wchar_t *mb_greeting;
   size_t len;
   greeting_type g = greet_traditional;
